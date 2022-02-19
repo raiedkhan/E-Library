@@ -1,0 +1,32 @@
+<div class="container contact-form">
+    <div class="row mt-5 text-center">
+        <h2>Contact Us <i class="far fa-address-card"></i></h2>
+    </div>
+    <div class="row mb-5">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <form #contactform="ngForm" (ngSubmit)="submitform(contactform.value)">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Name</label>
+                    <input type="text" name="name" class="form-control" id="exampleFormControlInput1" placeholder="Name"
+                        ngModel #uname="ngModel" required>
+                        <span *ngIf="uname.invalid" class="text-danger">Name is required</span>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                    <input type="email" name="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="name@example.com" ngModel>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="text"
+                        ngModel></textarea>
+                </div>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <button class="btn btn-success" type="submit">Submit <i class="far fa-check-square"></i></button>
+                </div>
+            </form>
+        </div>
+        <div class="col-2"></div>
+    </div>
+</div>

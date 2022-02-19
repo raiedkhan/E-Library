@@ -1,0 +1,8 @@
+
+.contact-form{
+    background: #fff;
+    width: 70%;
+}
+.contact-form .form-control{
+    border-radius:1rem;
+}

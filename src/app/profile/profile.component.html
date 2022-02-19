@@ -1,0 +1,17 @@
+<span *ngIf="check_user;else elseBlock">
+    <b>
+        Welcome Guest !!!
+    </b>
+</span>
+<ng-template #elseBlock>
+    <span>
+        <b>
+            Welcome User !!!
+        </b>
+    </span>
+</ng-template>
+<button (click)="toggle()" type="button" class="btn btn-success" >
+    <b>
+        {{check_user?'Login ':'Logout'}}
+    </b>
+</button>

@@ -1,0 +1,13 @@
+<header class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand " routerLink="/">
+        <img src="../../assets/wynklogo.png" alt="" width="200px" height="40px" class="d-inline-block align-text-top">
+      </a>
+      <div class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search In Reactive" aria-label="Search" [formControl]="searchtext"> 
+      </div>
+      <li class="nav-item d-flex">
+        <app-profile></app-profile>
+      </li>
+    </div>
+</header>

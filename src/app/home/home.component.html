@@ -1,0 +1,161 @@
+<div class="container mt-5 mb-5">
+    <div class="row">
+        <figure class="text-center">
+            <blockquote class="blockquote">
+                <p>
+                    If e-book readers were invented before print books, (petty things such as) the smell of ink would
+                    have been some people’s only reason for not abandoning e-books.
+                </p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+                <cite title="Source Title">Mokokoma Mokhonoana</cite>
+            </figcaption>
+        </figure>
+    </div>
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="../../assets/1.jpg" class="d-block w-100" alt="..." height="500px" width="400px">
+                <div class="carousel-caption d-none d-md-block  text-light">
+                    <h5>Free for everyone</h5>
+                    <p>We at Wynk E-Library provide every user free access to our E-books</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="../../assets/2.jpg" class="d-block w-100" alt="..." height="500px" width="400px">
+                <div class="carousel-caption text-light d-none d-md-block">
+                    <h5>Variety of E-Books</h5>
+                    <p>We at Wynk E-Library are available with all kinds of E-book out there.</p>
+
+                </div>
+            </div>
+            <div class="carousel-item text-light">
+                <img src="../../assets/3.jpg" class="d-block w-100" alt="..." height="500px" width="400px">
+                <div class="carousel-caption text-light d-none d-md-block">
+                    <h5>Tap and Read</h5>
+                    <p>We have all the books available at your finger tips, just Tap And Read</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div class="row mt-3">
+        <div class="col-4"></div>
+        <div class="col-4 text-center">
+            <h2>Latest Publications</h2>
+        </div>
+        <div class="col-4"></div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4 mt-2">
+        <div class="col">
+            <div class="card h-100">
+                <img src="../../assets/takemehome.jpg" class="card-img-top" alt="..." height="200px">
+                <div class="card-body">
+                    <h5 class="card-title">Take Me Home</h5>
+                    <p class="card-text">The time has come for Bob and the fleet to head back to Earth, and see if they
+                        can get along with the people there. The band puts on a concert to celebrate. Get ready for the
+                        Bottish Invasion!</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Published on June 15 2021</small>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="../../assets/wmnintech.jpg" class="card-img-top" alt="..." height="200px">
+                <div class="card-body">
+                    <h5 class="card-title">Women In Tech</h5>
+                    <p class="card-text">
+                        “Jam packed with insights from women in the field,” this is an invaluable career guide for the
+                        aspiring or experienced female tech professional (Forbes)
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Published on June 10 2021</small>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100">
+                <img src="../../assets/chooseme.jpg" class="card-img-top" alt="..." height="200px">
+                <div class="card-body">
+                    <h5 class="card-title">Choose Me</h5>
+                    <p class="card-text">
+                        From New York Times bestseller Tess Gerritsen and acclaimed thriller writer Gary Braver comes a
+                        murder mystery about a reckless affair and dangerous secrets.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">
+                        Published on June 1 2021
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-3" [ngClass]="{selectorclass:true}" >
+        <div class="col-3"></div>
+        <div class="col-6 text-center">
+            <h3 highlighter>Get Link to our top Resources</h3>
+        </div>
+        <div class="col-3"></div>
+    </div>
+    <div class="row mt-1">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <select class="form-select" aria-label="Default select example" [(ngModel)]="resourceSelected">
+                <option selected>Select Any Books And get the Resource</option>
+                <option value="ADL">ADL</option>
+                <option value="ETP">ETP</option>
+                <option value="DLB">DLB</option>
+                <option value="BIOE">BIOE</option>
+                <option value="CTF">CTF</option>
+            </select>
+        </div>
+        <div class="col-4" [ngSwitch]="resourceSelected">
+            <h5 *ngSwitchCase="'ADL'">www.ADL.gov.in</h5>
+            <h5 *ngSwitchCase="'ETP'">www.ETL.gov.in</h5>
+            <h5 *ngSwitchCase="'DLB'">www.DLB.gov.in</h5>
+            <h5 *ngSwitchCase="'BIOE'">www.BIOE.gov.in</h5>
+            <h5 *ngSwitchCase="'CTF'">www.CTF.gov.in</h5>
+            <h5 *ngSwitchDefault>Select Default</h5>
+        </div>
+        <div class="col-2">
+            <ul>
+            </ul>
+        </div>
+    </div>
+    <div class="row" >
+        <h3 class="text-center">Top Resources Available !!!</h3>
+        <ul class="list-group" >
+            <li class="list-group-item"*ngFor="let city of cities"  [ngStyle]="{color:fontColor}">{{city}}</li>
+        </ul>
+    </div>
+    <h3>PIPES</h3>
+    <span>{{books|json}}</span><br>
+    <span>{{250|currency:'Rs'}}</span><br>
+    <span>{{0.4|percent}}</span>
+    <p>{{28723647324|number}}</p>
+    <p>{{today|date:"dd/MM/YYYY"}}</p>
+    <p>{{today|date:"short"}}</p>
+    <p>casepipe : {{'accenture'|uppercase}}</p>
+    <p>Slice : {{'citiess'| slice:0:2}}</p>
+    <p>Format : {{"Shilpa" |format:'female'}}</p>
+    <p>Format : {{"Arun" |format:'male'}}</p>
+</div>

@@ -1,0 +1,29 @@
+<div class="container mt-5 mb-5">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6 text-center">
+            <h2>Browse Books <i class="fas fa-sort"></i></h2>
+        </div>
+        <div class="col-3"></div>
+    </div>
+    <div class="row">
+        <div class="col-3 mt-4">
+            <div role="tabpanel">
+                <div class="list-group" id="myList" role="tablist">
+                    <a class="list-group-item list-group-item-action active" data-bs-toggle="list" routerLink='/browse/books/Java'
+                        role="tab">Java</a>
+                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" routerLink='/browse/books/Internet'
+                        role="tab">Internet</a>
+                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" routerLink='/browse/books/Web Development'
+                        role="tab">Web-development</a>
+                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" routerLink='/browse/books/friction'
+                        role="tab">Friction</a>
+                    <a class="list-group-item list-group-item-action" data-bs-toggle="list" routerLink='/browse/books/Mobile'
+                        role="tab">Mobile</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-9">
+            <router-outlet></router-outlet>
+        </div>
+    </div>

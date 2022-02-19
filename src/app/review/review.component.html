@@ -1,0 +1,42 @@
+<div class="container contact-form">
+    <div class="row mt-2 text-center">
+        <h2>Review Form <i class="fab fa-searchengin"></i></h2>
+    </div>
+    <div class="row mb-5">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <form [formGroup]="reviewForm" (ngSubmit)="handlesubmit()">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name"
+                        formControlName="name">
+                    <div *ngIf="reviewForm.controls['name'].hasError('required')">
+                        <b>
+                            Name cannot be Blank
+                        </b>
+                    </div>
+                    Length : {{reviewForm.value.name.length}}
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Title</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Title"
+                        formControlName="title">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Rating</label>
+                    <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Rating"
+                        formControlName="rating">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Comments</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                        formControlName="comments"></textarea>
+                </div>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <button class="btn btn-success" type="submit">Submit <i class="far fa-check-square"></i></button>
+                </div>
+            </form>
+        </div>
+        <div class="col-3"></div>
+    </div>
+</div>
